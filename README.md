@@ -25,5 +25,7 @@ If there is an issue contact me at: aho66@ucmerced.edu
 
 ## Development
 Create virtual environment
-` cd Lyrical `
+<br>
+` cd Lyrical ` 
+<br>
 ` conda activate Lyrical `
