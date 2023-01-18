@@ -4,12 +4,12 @@
 > ⚠️ **Currently in Development** ⚠️
 
 ## Description
-On going project aimed at utilizing Spotify and Cyanite API to find similar songs that follow the user's tastes. Once the project exits the development stage, it would be available to run utilizing local servers. 
+On going project aimed at utilizing Spotify and a Chatbot (WPI) to find similar songs that follow the user's tastes. Once the project exits the development stage, it would be available to run utilizing local servers. 
 
 The project may change throughout the development stage as I am still exploring the APIs
 
 ## Goals
-- [ ] User is shown statistics about their most listened to song
+- [ ] User is able to ask the chatbot
 - [ ] User is able to select a song (most listened or search)
     - [ ] Can chose from Genre and/or Language
     - [ ] Once selected, the user is prompted to highlight a line from their song
