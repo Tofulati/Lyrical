@@ -22,3 +22,8 @@ The project may change throughout the development stage as I am still exploring 
 
 ## Help
 If there is an issue contact me at: aho66@ucmerced.edu
+
+## Development
+Create virtual environment
+` cd Lyrical `
+` conda activate Lyrical `
