@@ -30,6 +30,6 @@ Create virtual environment
 <br>
 ` conda activate Lyrical `
 
-# Sources
+# Credit
 - https://www.kaggle.com/code/leomauro/spotify-songs-similarity-search/notebook
 - https://www.kaggle.com/datasets/geomack/spotifyclassification
