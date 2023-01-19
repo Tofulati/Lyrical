@@ -29,3 +29,6 @@ Create virtual environment
 ` cd Lyrical ` 
 <br>
 ` conda activate Lyrical `
+
+# Files
+https://www.kaggle.com/datasets/tofulati/song-attributes
