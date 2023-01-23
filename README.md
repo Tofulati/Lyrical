@@ -8,7 +8,16 @@ On going project aimed at utilizing Spotify and a Chatbot (WPI) to find similar 
 
 The project may change throughout the development stage as I am still exploring the APIs
 
-## Goals
+## Current Capabilities
+- User can enter playlist url
+- User can enter query song url
+- User can type how many similar songs wanted
+- Program prints completed dialogue (including reference and similar songs)
+
+![Sample Screenshot](https://github.com/tofulati/Lyrical/blob/main/Sample.png?raw=true)
+
+
+## Ideas
 - [ ] User is able to ask the chatbot
 - [ ] User is able to select a song (most listened or search)
     - [ ] Can chose from Genre and/or Language
