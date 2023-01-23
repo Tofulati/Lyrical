@@ -34,7 +34,7 @@ def extract(playlistID):
             features_df = pd.DataFrame(data=features, columns=features[0].keys())
             features_df['title'] = playlist_tracks_titles
             features_df['artist'] = playlist_tracks_artists
-            features_df = features_df[['id', 'title', 'artist',
+            features_df = features_df[['id', 'title', 'artist', 'speechiness',
                                        'danceability', 'energy', 'key', 'loudness',
                                        'mode', 'acousticness', 'instrumentalness',
                                        'liveness', 'valence', 'tempo',
@@ -52,6 +52,7 @@ def extract(playlistID):
                 new_row = {'id': [playlist_tracks_id],
                            'title': [playlist_tracks_titles],
                            'artist': [playlist_tracks_artists],
+                           'speechiness': [features[0]['speechiness']],
                            'danceability': [features[0]['danceability']],
                            'energy': [features[0]['energy']],
                            'key': [features[0]['key']],
