@@ -10,24 +10,43 @@ extract(playlist_id)
 dfSongs = pd.read_csv('song_attributes.csv')
 rows, cols = dfSongs.shape
 
-# song_url = input("Spotify song URL: ")       # Spotify song URL
-# song = song_search(song_url)
-# songName = song['name']
+song_url = input("Spotify song URL: ")       # Spotify song URL
+song = song_search(song_url)
+simSong = pd.read_csv('searched_song.csv')
+rows, cols = simSong.shape
 
-songIndex = 324
-columns = ['acousticness','danceability','energy','instrumentalness','liveness','tempo','valence']
-func, param = knnQuery, 10
-response = querySimilars(dfSongs, columns, songIndex, func, param)
+k = int(input("Song recommendations: "))
+print()
 
-anySong = dfSongs.loc[songIndex]
-anySongInfo = anySong['artist'] + " - " + anySong['title']
-sptfyLink = "http://open.spotify.com/track/" + anySong['id']
-print(f"[Reference Song]\n{anySongInfo}\n{sptfyLink}\n")
+idx = 0
+counter = 0
+for i in range(len(dfSongs)):
+    if simSong.loc[0]['id'] in dfSongs['id'][i]:
+        idx = counter
+        break
+    else:
+        counter += 1
+else:
+    dfSongs = pd.concat([dfSongs, simSong], ignore_index=True)
+    idx = len(dfSongs)-1
+
+columns = ['acousticness','danceability','energy','instrumentalness','liveness','tempo','valence', 'speechiness', 'mode', 'loudness']
+func, param = knnQuery, k
+response = querySimilars(dfSongs, columns, idx, func, param)
+
+refSong = simSong.loc[0]
+refSongInfo = refSong['artist'] + " - " + refSong['title']
+sptfyLink = "http://open.spotify.com/track/" + refSong['id']
+print(f"[Reference Song]\n{refSongInfo}\n{sptfyLink}\n")
 
 print("[Similar songs]")
 for idx in response:
-    anySong = dfSongs.loc[idx]
-    anySongInfo = anySong['artist'] + " - " + anySong['title']
-    sptfyLink = "http://open.spotify.com/track/" + anySong['id']
-    print(f"{anySongInfo}\n{sptfyLink}\n------------------------------------")
+    simSong = dfSongs.loc[idx]
+    simartist = simSong['artist']
+    simtitle = simSong['title']
+    simSongInfo = simartist + " - " + simtitle
+    sptfyLink = "http://open.spotify.com/track/" + simSong['id']
+    print(f"{simSongInfo}\n{sptfyLink}\n------------------------------------")
+
+
 
