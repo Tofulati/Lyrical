@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  font-family: "Arial", sans-serif;
+  background: #121212;
+  overflow: hidden;
+}
+
+h1 {
+  position: relative;
+  left: 400px;
+  top: 20px;
+  color: white;
+  font-size: 40px;
+}
+
+.btn.dropdown-toggle {
+  width: 150px;
+  text-align: center;
+}
+
+span.caret {
+  position: absolute;
+  left: 90%;
+  top: 45%;
+}
+
+label {
+  padding-top: 3px;
+  color: white;
+  font-size: 20px;
+}
+
+.form-label {
+  padding-left: 0px !important;
+}
+
+.form-control {
+  border-radius: 100px;
+}
+
+.btn-success {
+  background-color: #3b7d4a im !important;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-success:hover {
+  background-color: #4daf64;
+}
+
+img.track {
+  border: 3px solid #8a8a8a;
+}
+
+.list-group-item {
+  background-color: #121212;
+  color: #6c869d;
+  width: 560px;
+  font-size: 20px;
+  user-select: none;
+}
+
+.list-group-item:hover {
+  background-color: #2b2b2b;
+}
+
+.list-group {
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: max-content;
+  transform: scale(0.95);
+}
+
