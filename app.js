@@ -1,7 +1,5 @@
 const APIController = (function() {
 
-
-
     // private methods
     const _getToken = async () => {
 
@@ -348,7 +346,7 @@ const APPController = (function(UICtrl, APICtrl) {
         const trackEndpoint = e.target.id;
         //get the track object
         const track = await APICtrl.getTrack(token, trackEndpoint);
-        window.open(track.external_urls['spotify'])
+        window.open(track.preview_url) //external_urls['spotify']
     });
 
     return {
