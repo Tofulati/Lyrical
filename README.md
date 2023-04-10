@@ -1,8 +1,6 @@
 # Lyrical
 *Find your music taste*
 
-> ⚠️ **Currently on Pause. Incorporating within [MusAe](https://github.com/Tofulati/MusAe)** ⚠️
-
 ## Description
 On going project aimed at utilizing the Spotify API to find similar songs that follow the user's tastes. Once the project exits the development stage, it would be available to run utilizing local servers. 
 
